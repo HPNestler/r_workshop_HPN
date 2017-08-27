@@ -1,0 +1,73 @@
+---
+title: "Markdown_Test"
+author: "Peter Nestler"
+date: "August 26, 2017"
+output: 
+     html_document:
+          toc: true
+---
+
+```{r}
+x = 4
+y = 7
+x+y
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+#GAPMINDER PLOTS
+
+``` {r}
+
+library(ggplot2)
+library(readr)
+gapminder <- read_delim(file = "datasets/gapminder.txt", 
+                        delim = "\t", escape_double = FALSE, trim_ws = TRUE)
+plot(gapminder$lifeExp, gapminder$gdpPercap)
+plot(gapminder$pop,gapminder$gdpPercap)
+gapminder$year = factor(gapminder$year, ordered = TRUE)
+plot(gapminder$year,gapminder$lifeExp, col  = rainbow(15))
+plot(gapminder$year,gapminder$gdpPercap, col  = rainbow(15))
+plot(gapminder$year,gapminder$pop, col  = rainbow(15))
+```
+
+Then there is a table:
+
+```{r}
+library(stats)
+library(readr)
+gapminder <- read_delim(file = "datasets/gapminder.txt", 
+                        delim = "\t", escape_double = FALSE, trim_ws = TRUE)
+#continents <- sort(gapminder$continent)
+for(cont in unique(sort(gapminder$country))){
+     life.min <- min(gapminder[gapminder$country == cont, 'lifeExp'])
+     life.max <- max(gapminder[gapminder$country == cont, 'lifeExp'])
+     a= subset(gapminder[gapminder$country == cont, 'lifeExp'])
+     life.med <- median(a$lifeExp)
+     print(paste0('The life expectancy in ',cont,' is ',life.min,' to ',life.max,'. The median life expectancy is ',life.med,'.'))
+}
+
+
+```

@@ -1,0 +1,800 @@
+SDC etherpad day 1
+
+vWelcome to Software Carpentry Etherpad!
+ 
+This pad is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents.
+ 
+Use of this service is restricted to members of the Software Carpentry and Data Carpentry community; this is not for general purpose use (for that, try etherpad.wikimedia.org).
+ 
+Users are expected to follow our code of conduct: http://software-carpentry.org/conduct.html
+ 
+All content is publicly available under the Creative Commons Attribution License: https://creativecommons.org/licenses/by/4.0/
+ 
+--------------------------------------------------------------------------------------------------------------------,
+ 
+Workshop Pre-Survey: https://www.surveymonkey.com/r/swc_pre_workshop_v1?workshop_id=2017-08-26-Tucson  (PLEASE COMPLETE!)
+ 
+GitHub Workshop Page: https://uhilgert.github.io/2017-08-26-Tucson/
+ 
+ 
+--------------------------------------------------------------------------------------------------------------------
+ 
+ 
+Introductions (Name, Affiliation/Department)
+Gaius Augustus, Cancer Biology GDIP
+mohammad Mog
+ 
+ Michael Marefat, 
+ 
+Andrew Antaya, M.S. student, School of Natural Resources and the Environment
+HiHi
+hello
+ 
+Austin Flohrschutz, Neuroscience
+Elan Here, PMS: Industrial Microbial Biotech
+heyNick DiRienzo, Ecology and Evolutionary Biologyb
+ 
+Hmmm
+Johan S. Martinez-Fuentes, Department of Cellular and Molecular Biology
+Cesar Medina, Department of Neuroscience
+Brady Hasse, Department of Neuroscience
+Goodmorning
+Lisa Nagy, MCB
+Kathleen (Master of Library Science )
+Cesar, Arsenal and Liverpool play tomorrow during this workshop at Anfield...I know...i.e. another Arsenal loss...Firminho has been on point for LiverpoolSanchito is back. With him and Ramsey, we have a chanceGiroud is doing well also. Chamberlin hasn't been as impactful as I thought he would be
+Erik Larsen, Neuroscience
+ 
+Hannah Tanquary, SIE
+Nima Jamilpour, AME
+ 
+Ohla
+This is a great day for learning!
+Hi
+I see Johan! Hey what's going on :) Matt
+ 
+ 
+Liz Carpenter M.S. EEB 
+Hello World!
+ 
+Andrew Tubbs, Neuroscience GIDP
+Hello! This is Jude!!!👍🏽
+ 
+Christina Morrison SWES (>'-')><('-'<)
+Hello 
+ 
+No deleting!
+Erik Lehmkuhl 
+Sara Parker, Neuroscience
+ 
+Michael Hastings Optical Science:
+Hello Hello
+ 
+hello
+ 
+ 
+Thanks Hannah. My life is complete! :D
+Haha, no problem!
+Good Morning, everyone!
+starting in 5,4,3,2,1...
+hi
+Hi Mo
+Sina Ehsani, SIE
+ Mohammad Moghaddam, HAS, MIS 
+Yingy
+oops
+Xue Pan, School of Plant Sciences
+Cheng
+Joey - physics
+Karan - Eller MIS
+AKSHIT 
+Megan Irby
+Saren Seeley, Psychology Department
+Frank Li, CMM
+Aidan Foster
+Daniel Truong, ISTA
+Lewis H
+Roman Palitsky, Psychology
+Frida Jauregui, Astronomy
+HSi(Rakesh, Optical sciences)tephanie Nagl, Psychology
+Peter nestler - Icagen and TLA
+Boris Reiss College of Public Health
+Trinny Tat, BME
+Regdy Vera, SIE/UITls --helpS
+Jacob Cecil, First year ABBS student
+Mohammad Sadat, PhD candidate, CEEM department 
+Valentino, ABS
+Jacey, Information Science
+Matt, Lunar and Planetary Sciences, Staff Scientist
+ 
+How to change Terminal colors, MAC OS X: (it's pretty close to this for git bash on windows)
+    https://www.youtube.com/watc
+How about #ls sort by date?  instead of size?
+Answer: ls -t  (there are additional options to choose ascending or decending, see link below)
+https://superuser.com/questions/147027/how-can-i-sort-the-output-of-ls-by-last-modified-date
+$ ls -la -t (lists by date but gives details too)
+Great point!! You can combine "flags" (everything that comes after the -).  Technically, you should be able to do ls -lat
+Again, you can see all the flags for a command with --help or man
+ 
+$ cd ..       will take you up a directory
+$ cd          will take you back to your home direction no matter where you are
+ 
+Are underscores generally accepted by most?
+Good folder and file naming: avoid spaces, hyphens '-', and periods. Windows is meanwhile quite tolerant (a.k.a. sloppy), but these characters cause trouble down the line. Many programming languagues have propblems with them. Spaces are considered 'end of name' and hyphens are often taken as the 'minus' operator. Underscores are generally well tolorated. 
+ 
+Q1: What is the command line equivalent to double-clicking a directory on your PC GUI to open a subdirectory SUB_DIRECTORY_NAME?        
+a)        cd SUB_DIRECTORY_NAME+1+1+1+1+1+1+1++1+11+1+1+1++1+1+11+1+11+11+1++1 +++11+++11 ++1++++11
++1+1+1+1++++plusone+++++1!1+11111+1!+
+b)        pwd+++!
+c)        cd ~
+d)        ls
+e)        cd ..
+f)        Any of the above
+g)        None of the above
+ 
+ 
+Q2: What is the command line equivalent to double-clicking a directory on your PC to see a listing of its content?        
+a)        cd directory_name +1(a)
+b)        pwd
+c)        cd ~1
+d)        ls+1+1+1++11+1++1++111++1+1+1+1-11+++1+1 +1+++1+++++1+++1+++++1+++++111111+1+1+1+11++1(b)1+1
+e)        cd ..
+f)        Any of the above
+g)        None of the above+1  cd Desktop | ls
+ 
+ 
+ 
+Q5) What is the consequence of typing 'rm ~/correct_path/correct_FILENAME'        
+a)        This will delete the file irrevocably++++1++1+1t1+1+1+sqrt(2) +1++1+1+1++1+1+!++11+1+1+1+11+1+1+1+1+!+1+1+1++21+1+1+1+1+1+1
+b)        This will move the file to the trash bin
+c)        A window will open to ask you whether you really wish to delete this file+1+1++11+1+1+1+1+1+1+1+1+1
+d)        This will rename the file
+e)        This will revert the file to an older version
+f)        Any of the above
+g)        None of the above
+ 
+ 
+Q6: What flag will give you a final say in whether an existing file will be overwritten (cp, mv) or deleted (rm) ?        
+a)        -r
+b)        -i++1+1++1++1 +1++11+11+++1+1++1!1+1+1+1+1+11+1++1+1+1+1+1+1 : - )+1+11+1++!1+1+1+1+11+1
+=1+1+1-iplus1+1+1+1+1+1
+ 
+c)        -f
+d)        -d
+e)        -I
+f)        Any of the above
+g)        None of the above
+ 
+Some shell command
+ 
+COMMAND --help OR man command = prints info about a command onto the screen (too much info may be tamed by use of 'COMMAND --help | less' or 'COMMAND --help > COMMAND_help.txt')
+ 
+pwd print/present working directory
+ 
+ls = list directory content
+ls -A = list almost all directory content
+ls -l = list content in (rich) list form
+ls -S = sort content by size
+ls -l -S = ls -lS = list content in (rich) list form AND sort content by size
+ls -s = content with "block sizes"
+ 
+cd <DIRECTORYNAME> change pwd into next deeper level directory DIRECTORYNAME
+cd .. change working directory to 1 level up in directory structure
+cd ~ change wd to HOME directory
+cd - change wd to previous directory
+ 
+access previous commands: use up-arrow
+ 
+extend a FILENAME or DIRECTORYNAME: use tab ("tab complete")
+ 
+cat FILENAME = shows content of file FILENAME
+head -n FILENAME = view first n lines in a file FILENAME
+tail -n FILENAME = view last n lines in a file FILENAME
+less FILENAME = show upper section of content FILENAME; proceed by hitting enter; exit by yping 'q'
+ 
+q = terminate process
+ 
+Ctl-z = ^z = stop process
+ 
+| = passing output from pevious command into new command
+ 
+> = entering output into a printable/viewable/saveable format
+ 
+ 
+mkdir DIRECTORYNAME creates new directory DIRECTORYNAME in current working directory
+ 
+cp -i NAME = copy a file or directory to another location or into another file (flag -i requires you to interactively approve this if it conflicts with a file by the same name)
+ 
+mv -i NAME = move or rename a file or directory (flag -i requires you to interactively approve this if it conflicts with a file by the same name)
+ 
+rm -i NAME = remove/delete a file irreversibly(!!!) (flag -i requires you to interactively approve removal)
+ 
+rm -r DIRECTORYNAME = remove directory DIRECTORYNAME irreversibly(!!!), regardless of whether DIRECTORYNAME contains anything or not
+ 
+ 
+ 
+ 
+ 
+
+Somebody had removed the hyperlink, here it is again:
+https://github.com/uhilgert/gapminderdata
+ 
+lsObeservation: if you set your comments in CSV in quotes, there is a difference whether you have a space between comma and quote. With a space, EXCEL will display the quotes. If you have no space between comma and opening quote the quotes are not displayed in EXCEL.
+ 
+ 
+ 
+ 
+WELCOME BACK FROM LUNCH!!!
+R: When you get back from lunch, go to this link:
+    https://github.com/gaiusjaugustus/intro-r-20170825
+    Follow the instructions listed when you scroll down.  Look for "Start Your Exciting R Adventure Here!"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Some shell command
+
+COMMAND --help OR man command = prints info about a command onto the screen (too much info may be tamed by use of 'COMMAND --help | less' or 'COMMAND --help > COMMAND_help.txt')
+
+pwd print/present working directory
+
+ls = list directory content
+ls -A = list almost all directory content
+ls -l = list content in (rich) list form
+ls -S = sort content by size
+ls -l -S = ls -lS = list content in (rich) list form AND sort content by size
+ls -s = content with "block sizes"
+
+cd <DIRECTORYNAME> change pwd into next deeper level directory DIRECTORYNAME
+cd .. change working directory to 1 level up in directory structure
+cd ~ change wd to HOME directory
+cd - change wd to previous directory
+
+access previous commands: use up-arrow
+
+extend a FILENAME or DIRECTORYNAME: use tab ("tab complete")
+
+cat FILENAME = shows content of file FILENAME
+head -n FILENAME = view first n lines in a file FILENAME
+tail -n FILENAME = view last n lines in a file FILENAME
+less FILENAME = show upper section of content FILENAME; proceed by hitting enter; exit by typing 'q'
+
+q = terminate process
+
+Ctl-z = ^z = stop process
+
+| = passing output from pevious command into new command
+
+> = entering output into a printable/viewable/saveable format
+
+
+mkdir DIRECTORYNAME creates new directory DIRECTORYNAME in current working directory
+
+cp -i NAME = copy a file or directory to another location or into another file (flag -i requires you to interactively approve this if it conflicts with a file by the same name)
+
+mv -i NAME = move or rename a file or directory (flag -i requires you to interactively approve this if it conflicts with a file by the same name)
+
+rm -i NAME = remove/delete a file irreversibly(!!!) (flag -i requires you to interactively approve removal)
+
+rm -r DIRECTORYNAME = remove directory DIRECTORYNAME irreversibly(!!!), regardless of whether DIRECTORYNAME contains anything or not
+
+ el
+hello - christina
+Morning
+Hi_Everyone.  <- "Roman"
+Hi
+Yay day 2 - Saren here.
+hello
+
+whats up!
+Hello All! HHi thereey
+the pen is mightierthen
+Hey there
+Hello !!
+
+
+Hola!
+
+#--Read in data frames
+# Base R
+gapminder <- read.csv(file = 'datasets/gapminder_backup.txt',
+                      header = TRUE,
+                      sep = '\t')
+
+# tidyverse
+library(readr)
+gapminder <- read_delim("~/intro-r-20170825/datasets/gapminder_backup.txt", 
+                        "\t", escape_double = FALSE, trim_ws = TRUE)
+
+#--For loops
+# Why are for loops useful
+library(dplyr)
+
+# Base R
+length(unique(gapminder$country))
+life.min <- min(gapminder[gapminder$country == 'Peru', "lifeExp"])
+life.max <- max(gapminder[gapminder$country == 'Peru', 'lifeExp'])
+print(paste0('The life expectancy in Peru is ',
+             life.min, ' to ', life.max))
+
+# Dplyr
+life.min <- gapminder %>% filter(country == 'Peru') %>%
+  select(lifeExp) %>% min()
+life.max <- gapminder %>% filter(country == 'Peru') %>%
+  select(lifeExp) %>% max()
+print(paste0('The life expectancy in Peru is ',
+             life.min, ' to ', life.max))
+
+# for loops
+#for(variable in object/vector){
+# what it is doing to the variable
+#}
+
+#base R
+countries <- unique(gapminder$country)
+countries <- unique(sort(gapminder$country))
+
+#dplyr
+#countries <- gapminder %>% select(country) %>% distinct()
+
+for(number in 1:10){
+  print(number)
+}
+  
+for(c in countries){
+  print(c)
+}
+
+for(c in unique(gapminder$country)){
+  print(c)
+}
+
+for(house in unique(gapminder$country)){
+  life.min <- min(gapminder[gapminder$country == house, "lifeExp"])
+  life.max <- max(gapminder[gapminder$country == house, "lifeExp"])
+  print(paste0('The life expectancy in ', house, ' is ',
+               life.min, ' to ', life.max))
+}
+
+for(house in countries){
+  # countries is the object created with base R unique(gapminder....)
+  life.min <- min(gapminder[gapminder$country == house, "lifeExp"])
+  life.max <- max(gapminder[gapminder$country == house, "lifeExp"])
+  print(paste0('The life expectancy in ', house, ' is ',
+               life.min, ' to ', life.max))
+}
+
+#Print life expectations with an index for each country
+id <- seq(1:length(countries))
+for(house in countries){
+  # house  <- 'Peru'
+  N<-id[house == countries]
+  life.min <- min(gapminder[gapminder$country == house, 'lifeExp'] )
+  life.max <- max(gapminder[gapminder$country == house, 'lifeExp'] )
+  print(paste0(N,'. ','The life expectancy in ',house,' is ',life.min,' to ',life.max,' years.'))
+}
+
+
+
+# small for loop where each variable within 1 through 10 is multiplied
+# by two and printed out
+
+for(x in c(1,2,3,4,5,6,7,8,9,10)){
+  print(x*2)
+}
+
+for(x in 1:10){
+  print(x*2)
+}
+
+for(x in seq(10)){
+  print(x*2)
+}
+
+stretch <- c(1:10)  
+for (n in stretch){  
+    multiple <- n*2  
+    print(paste0(n, ' times two is ', multiple)) 
+    }
+
+for(TestNumber in 1:10){
+  TestMultiplication <- TestNumber*2
+  print(paste0("The Multiplications *2 from 1 to 10 are: ", 
+               TestMultiplication, " when ", TestNumber))
+}
+
+for (i in 1:10) {print(i*2)}
+
+or
+print ((1:10)*2)
+
+# small for loop where each variable within 1 through 10 is multiplied
+# by two and printed out
+
+for(x in c(1,2,3,4,5,6,7,8,9,10)){
+  print(x*2)
+}
+
+for(x in 1:10){
+  print(x*2)
+}
+
+for(x in seq(10)){
+  print(x*2)
+}
+
+for(TestNumber in 1:10){
+  TestMultiplication <- TestNumber*2
+  print(paste0("The Multiplications *2 from 1 to 10 are: ", 
+               TestMultiplication, " when ", TestNumber))
+}
+
+
+# Apply functions
+# apply()
+# lapply()
+# sapply()
+# vapply()
+
+apply(gapminder[ , c(4,5)], 2, function(x) mean(x))
+
+apply(gapminder[1:10 , c(4,5)], 2, function(x) mean(x))
+
+mylist <- lapply(1:3, function(x) x^2)
+sapply(1:3, function(x) x^2)
+
+mylist[2]
+
+Exercise
+Let's try out a for loop and it's apply function alternative. In this exercise, we are going to be taking the square root of each integer in a vector. Either create a for loop or use the sapply function to take the square root and return the output.
+sqrt()
+
+loop.vector <- c(1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
+
+loop.vector <- c(1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
+root.vector <- sapply(loop.vector, function(x) sqrt(x))
+root.vector
+
+loop.vector <- c(1, 4, 9, 16, 25, 36, 49, 64, 81, 100)  
+for (n in loop.vector){ 
+     root1 <- sqrt(n)  
+     print(paste0(' the square root of ', n, ' is ', root1)) 
+}
+
+loop.vector <- c(1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
+for (x in loop.vector){
+  sqrt <- sqrt(x)
+  print(paste0("The square root of ", x, " is ", sqrt))
+}
+
+sapply(loop.vector, function(x) sqrt(x))
+
+for (c in loop.vector){
+  print(sqrt(c))
+}
+
+s=sapply(c(1, 4, 9, 16, 25, 36, 49, 64, 81, 100), function(x) sqrt(x))
+sapply(loop.vector,sqrt)
+
+loop.vector <- c(1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
+for (sqr in loop.vector) {
+  print(sqrt(sqr))
+}
+
+sapply(loop.vector, function(x) sqrt(x))
+
+for(i in 1:length(loop.vector)){
+  print(sqrt(loop.vector[i]))
+}
+
+for(i
+
+for(e in loop.vector){
+  print(sqrt(e)) in loop.vector){
+  print(sqrt(i))
+}
+
+sapply(loop.vector, function(x) sqrt(x))
+
+sapply(loop.vector, sqrt)
+}
+
+sapply(loop.vector, function(e) sqrt(e))
+
+loop.vector <- c(1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
+for(x in loop.vector){
+print(sqrt(x))
+}
+
+Return from break at 10:41!!!
+Welcome back. This is what we hope to finish before lunch at 12:15
+If Else statements
+Functions
+Plotting in Base R
+Plotting in ggplot
+
+
+
+# If else statements
+x <- 5
+
+# if(conditional){
+# function
+#} else {
+# function
+#}
+#
+
+x <- 0
+
+if(x > 0){
+  print('Positive number')
+} else {
+  print('Negative number')
+} 
+
+if(x > 0){
+  print('Positive number')
+} else if (x < 0){
+  print('Negative number')
+} else {
+  print('Zero')
+}
+
+
+# To combine conditional statements '&' or '|'
+if(x > 0 & x != 7){}
+
+# mean life expectancy 71.5
+for(x in gapminder$lifeExp){
+  if(x > 71.5){
+    print(paste(x, 'is greater than avg.'))
+  }
+}
+  
+
+
+# Functions
+mean(gapminder$lifeExp)
+sum(gapminder$lifeExp)/nrow(gapminder)
+
+# NameofFunction <- function(Arguments){
+#  body
+#}
+
+mymean <- function(data, col){
+  mean <- sum(data[col])/nrow(data)
+  return(mean)
+}
+
+mean.2 <- mymean(gapminder, 'lifeExp')
+mean(gapminder$lifeExp)
+
+mymean.error <- function(data, col){
+  mean <- sum(data[col])/nrow(data)
+}
+
+mean <- mymean.error(gapminder, 'lifeExp')
+
+
+mymean <- function(data, col){
+  mean <- sum(data[col])/nrow(data)
+  return(mean)
+}
+
+
+iris <- read.csv(file = 'datasets/iris.txt', # Use tab completion with ' '
+                 header = T,
+                 sep = '\t')
+
+
+#--Plotting
+# Base R 
+
+iris <- read.csv(file = 'datasets/iris.txt', 
+                 header = T,
+                 sep = '\t')
+
+# Scatter plot
+class(iris$Sepal.Length)
+str(iris)
+
+plot(iris$Sepal.Length, iris$Petal.Length,
+     xlab = 'Sepal length',
+     ylab = 'Petal length')
+# lm(y ~ x)
+abline(lm(iris$Petal.Length ~ iris$Sepal.Length))
+
+
+# abline(lm(iris$Sepal.Length ~ iris$Petal.Length))
+
+# Histogram
+plot(iris$Sepal.Length, type = 'h')
+
+# boxplot
+# boxplot(y ~ x)
+boxplot(iris$Sepal.Length ~ iris$Petal.Length)
+
+boxplot(iris$Sepal.Length ~ iris$Species)
+
+
+library(ggplot2)
+ggplot(data = iris, aes(x=Petal.Length, y=Petal.Width)) + geom_point()
+
+
+ggplot(iris, aes(x=Species, y=Sepal.Width)) +
+     geom_violin(alpha=0.5, show.legend = FALSE, aes(fill = Species)) + 
+     stat_boxplot(geom ='errorbar', width=0.25) +
+     geom_boxplot(width=0.5, show.legend = FALSE) + 
+     geom_dotplot(binaxis="y", stackdir="center", position="dodge", dotsize=0.75, aes(fill=Species)) + 
+     ggtitle("Sepal width for three species of iris") + 
+     labs(x="Iris Species", y="Sepal Width") + 
+     theme_classic() + 
+     theme(axis.title = element_text(size=15),
+           plot.title = element_text(size = 24, hjust = 0.5),
+           axis.text = element_text(size=13, color = "black")) +
+     scale_fill_manual(values = c("#3A9276","#F14705","#4F68A1")) 
+
+
+Exercise:
+    1. histogram of the gapminder population data
+    2. scatterplot with a linear regression line
+    population data and life expectancy
+
+ggplot(gapminder, aes(x = pop)) + geom_histogram()
+plot(gapminder$pop, type = 'h')
+
+plot(gapminder.base$pop, type = 'h',
+     ylab = "Population")
+     
+     ggplot(gapminder_backup, aes(x=gapminder_backup$pop)) + geom_histogram()
+
+ggplot(gapminder_backup, aes(x=gapminder_backup$pop, y=gapminder_backup$lifeExp)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+ggplot(data=gapminder, aes(x=pop)) + geom_histogram()
+hist(gapminder$pop) # nice, this person used a different command hist() to create a histogram; hist is part of base R
+
+ggplot(data=gapminder, aes(x=pop, y=lifeExp))+ geom_point() + geom_smooth()
+ggplot(data=gapminder, aes(x=pop, y=lifeExp))+ geom_point() + geom_smooth(method="lm") 
+ggplot(data=gapminder, aes(x=pop, y=lifeExp))+ geom_point() + geom_smooth(method="lm") + geom_smooth()
+plot(gapminder$pop,gapminder$lifeExp)
+abline(lm(gapminder$lifeExp~gapminder$pop))
+
+# 1. histogram of the gapminder population data
+# base R
+plot(gapminder$pop, type ='h',
+     ylab = 'Population')
+
+# ggplot
+ggplot(gapminder, aes(x=pop)) + 
+  geom_histogram()
+
+#  2. scatterplot with a linear regression line
+
+# base R
+plot(gapminder$lifeExp, gapminder$pop,
+     xlab = 'Life expectancy',
+     ylab = 'Population')
+abline(lm(gapminder$pop ~ gapminder$lifeExp))
+
+# ggplot2
+ggplot(gapminder, aes(x=lifeExp, y=pop)) + 
+  geom_point() + 
+  geom_smooth(method= "lm",se = FALSE)
+
+
+ggplot(iris, aes(x=Sepal.Length, fill = Species)) + 
+  geom_histogram()
+
+ggplot(iris, aes(x=Sepal.Length, fill=Species)) + 
+  geom_histogram(position = "identity", alpha = 0.5)
+
+ggplot(iris, aes(x=Sepal.Length, fill=Species)) + 
+  geom_histogram(alpha = 0.5)
+
+#Scatter plot extra options:
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, 
+                 color = Sepal.Width)) + geom_point()
+
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, 
+                 color = Species)) + geom_point()
+
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, 
+                 color = "coral")) + geom_point()
+
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, 
+                 shape = Species)) + geom_point()
+
+ggplot(iris, aes(x=Species, y=Sepal.Length)) + 
+  geom_point()
+
+ggplot(iris, aes(x=Species, y=Sepal.Length)) + 
+  geom_jitter(width=0.25)
+
+#Boxplots
+ggplot(iris, aes(x=Species, y=Sepal.Length, color=Species)) + 
+  geom_boxplot()
+
+#Barplot
+ggplot(iris, aes(x=Petal.Width)) + geom_bar()
+
+ggplot(iris, aes(x=Petal.Width, fill=Species)) + geom_bar()
+ggplot(iris, aes(x=Sepal.Length, fill=Species)) + 
+  geom_bar(position = "dodge")
+ggplot(iris, aes(x=Sepal.Length, fill=Species)) + 
+  geom_bar(position = "fill")
+
+
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Sepal.Width)) +
+  geom_point() +
+  facet_grid( . ~ Species) +
+  labs(x = "Sepal length (mm)", y="Sepal width (mm)") +
+  theme_classic()
+
+
+
+========================================================
+Day 2 After lunch
+1. Welcome back
+2. Pre-lunch comments
+3. Plan of action for this afternoon
+3.1 Finish ggplots
+3.2 Github and RStudio
+3.3 Final exercerise
+
+
+Exercise: 
+
+1. Subset your gapminder dataset to where you have only data for Syria, Thailand, and Spain.
+2. Create a box plot of the population data.
+3. Change the x- and y-axis labels.
+4. Add facets based on country and color based on country.
+
+country_name_subset = c("Spain", "Syria", "Thailand")
+country_subset = gapminder[is.element(gapminder$country, country_name_subset),]
+
+ggplot(country_subset, aes(x = country, y = pop, color = country)) + 
+  geom_boxplot() +
+  labs(x = "Country Name", y = "Population") +
+  facet_grid( . ~ country)
+
+filteredGap <- gapminder.base %>% 
+  filter(gapminder.base$country == c('Syria', 'Thailand', 'Spain'))
+
+df<-subset(gapminder, country %in% c('Syria','Thailand','Spain'))
+df2<-gapminder[gapminder$country %in% c('Syria','Thailand','Spain'), ]
+
+gapminder.subset<- gapminder %>% filter(country == 'Peru' | country == 'Syria' | country == 'Thailand')
+
+
+
+
+
+ggplot(STPGAP, aes(country,pop,color=country))+geom_boxplot()+labs(x="Country",y="Population")
+ggplot(STPGAP, aes('',pop,color=country))+geom_boxplot()+labs(x="Country",y="Population")+facet_grid(.~country)
+
+# Liz's code
+#dplyr
+gapminder %>% filter(country %in% c('Syria', 'Thailand','Spain'))
+
+#R base
+sts <- gapminder[gapminder$country %in% c('Syria', 'Thailand','Spain'), ]
+
+#R base : subset(data, subset, ...)
+country_subset = subset(gapminder, country %in% c('Syria','Thailand', 'Spain'))
+ 
+https://www.r-bloggers.com/to-attach-or-not-attach-that-is-the-question/
+
+Free scales in faceting:
+    http://www.cookbook-r.com/Graphs/Facets_(ggplot2)/#free-scales
+    
+
+GitHub workflow:
+    https://guides.github.com/introduction/flow
+    
